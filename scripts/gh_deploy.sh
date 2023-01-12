@@ -6,6 +6,7 @@ DEPLOY_LOG_PATH="/home/ubuntu/$PROJECT_NAME/deploy.log"
 DEPLOY_ERR_LOG_PATH="/home/ubuntu/$PROJECT_NAME/deploy_err.log"
 APPLICATION_LOG_PATH="/home/ubuntu/$PROJECT_NAME/application.log"
 BUILD_JAR=$(ls $JAR_PATH)
+echo "> BUILD_JAR 목록1 $BUILD_JAR" >> $DEPLOY_LOG_PATH
 JAR_NAME=$(basename $BUILD_JAR)
 
 echo "===== 배포 시작 : $(date +%c) =====" >> $DEPLOY_LOG_PATH
@@ -16,7 +17,7 @@ cp $BUILD_JAR $DEPLOY_PATH
 
 echo "> 현재 동작중인 어플리케이션 pid 체크" >> $DEPLOY_LOG_PATH
 CURRENT_PID=$(pgrep -f $JAR_NAME)
-echo "> BUILD_JAR 목록 $BUILD_JAR" >> $DEPLOY_LOG_PATH
+echo "> BUILD_JAR 목록2 $BUILD_JAR" >> $DEPLOY_LOG_PATH
 if [ -z $CURRENT_PID ]
 then
   echo "> 현재 동작중인 어플리케이션 존재 X" >> $DEPLOY_LOG_PATH
