@@ -1,5 +1,3 @@
-
-
 #!/bin/bash
 PROJECT_NAME="github_action"
 JAR_PATH="/home/ubuntu/github_action/build/libs/*.jar"
