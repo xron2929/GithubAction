@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /
     detination: /home/ubuntu/github_action
-    overwrite: yes
+    overwrite: no
 permissions:
   - object: /
     pattern: "**"
