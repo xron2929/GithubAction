@@ -1,14 +1,21 @@
-override.value=${override.value}
+override:
+  value=${override.value}
   # \uC774\uC81C \uADF8 \uBB50\uC57C \uBCF5\uC7A1\uD558\uAC8C \uCF54\uB529\uD560 \uC0DD\uAC01\uC784
   # properties\uB85C \uBC14\uAFD4\uBC84\uB9AC\uACE0, A \uD30C\uC77C\uC774 B \uD30C\uC77C \uCC38\uC870\uD560 \uB584 \uB418\uB294\uC9C0 \uD655\uC778\uD558\uACE0
     # \uB3C4\uCEE4 \uCEE8\uD14C\uC774\uB108 \uB4F1\uB85D\uD558\uACE0 \uBCF5\uC7A1\uD558\uAC8C \uBC14\uAFD4\uC57C\uB428
   # \uADF8\uAC70\uB85C \uC774\uC81C \uD504\uB85C\uBA54\uD14C\uC6B0\uC2A4 \uADF8\uB77C\uD30C\uB098\uB4F1\uB85D\uD558\uBA74 \uB428
   # \uADF8\uB9AC\uACE0 \uD14C\uC2A4\uD2B8 \uC790\uB3D9\uD654 \uD558\uB294 \uAC83\uB3C4 \uD574\uC57C\uB418\uACE0
     # \uADF8 \uB2E4\uC74C \uBA85\uB839\uC5B4
-spring.datasource.url={{URL}}
-spring.datasource.username=root
-spring.datasource.password={{PASSWORD}}
-spring.jpa.hibernate.ddl-auto=create-drop
+spring:
+  datasource:
+    url: {{URL}}
+    username: root
+    password: {{PASSWORD}}
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
 
-spring.jpa.properties.hibernate.format_sql=true
-spring.jpa.show-sql=true
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
