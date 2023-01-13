@@ -16,7 +16,10 @@ if [ -e $DEPLOY_ERR_LOG_PATH ]
 then
   rm $DEPLOY_ERR_LOG_PATH
 fi
-
+if [ -e $APPLICATION_LOG_PATH ]
+then
+  rm $APPLICATION_LOG_PATH
+fi
 echo "> build 파일명: $JAR_NAME" >> $DEPLOY_LOG_PATH
 echo "> build 파일 복사" >> $DEPLOY_LOG_PATH
 cp $BUILD_JAR $DEPLOY_PATH
