@@ -6,8 +6,14 @@ DEPLOY_LOG_PATH="/home/ubuntu/$PROJECT_NAME/deploy.log"
 DEPLOY_ERR_LOG_PATH="/home/ubuntu/$PROJECT_NAME/deploy_err.log"
 APPLICATION_LOG_PATH="/home/ubuntu/$PROJECT_NAME/application.log"
 echo "===== 이전 프로세스 죽이기 시작 : $(date +%c) =====" >> $DEPLOY_LOG_PATH
+DEPLOY_PATH_FILE=$(cat DEPLOY_PATH)
+DEPLOY_PATH_FILE=$(cat DEPLOY_LOG_PATH)
 BUILD_JAR=$(ls $JAR_PATH)
 JAR_NAME=$(basename $BUILD_JAR)
+if [ $DEPLOY_PATH_FILE ]
+then rm DEPLOY_LOG_PATH
+if [ $DEPLOY_PATH_FILE ]
+then rm DEPLOY_LOG_PATH
 echo "> build 파일명: $JAR_NAME" >> $DEPLOY_LOG_PATH
 echo "> build 파일 복사" >> $DEPLOY_LOG_PATH
 cp $BUILD_JAR $DEPLOY_PATH
