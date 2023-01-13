@@ -9,7 +9,8 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ActiveProfiles("localtest")
+// @ActiveProfiles("localtest")
+@ActiveProfiles("test")
 @SpringBootTest
 public class GithubActionLocalTests {
     @Autowired
