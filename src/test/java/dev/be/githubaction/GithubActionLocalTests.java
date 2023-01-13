@@ -31,6 +31,6 @@ public class GithubActionLocalTests {
     }
     @Test
     void newExceptionTest() {
-        throw new RuntimeException("일부러 에러 러발생하고 단위 테스트");
+        throw new RuntimeException("일부러 에러 발생하고 단위 테스트");
     }
 }
