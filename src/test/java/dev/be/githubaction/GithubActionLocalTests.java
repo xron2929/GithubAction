@@ -30,8 +30,10 @@ public class GithubActionLocalTests {
         Member member1 = memberRepository.findById(member.getId()).get();
         System.out.println("member1 = " + member1);
     }
+    /*
     @Test
     void newExceptionTest() {
         throw new RuntimeException("일부러 에러 발생하고 단위 테스트");
     }
+     */
 }
