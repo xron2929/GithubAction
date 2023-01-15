@@ -32,6 +32,7 @@ jobs:
           override.value: ${{ secrets.DI_FROM_SECRET }}
           spring.datasource.url: ${{secrets.RDS_URL}}
           spring.datasource.password: ${{secrets.RDS_PASSWORD}}
+          spring.profiles.active: local
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
         shell: bash
