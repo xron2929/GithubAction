@@ -43,4 +43,5 @@ export $EPLOY_ERR_LOG_PATH
 sh /home/ubuntu/security-sh/githubAtion.sh
 sleep 3
 
+
 echo "> 배포 종료 : $(date +%c)" >> $DEPLOY_LOG_PATH
