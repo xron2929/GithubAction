@@ -37,8 +37,10 @@ fi
 echo "===== 배포 시작 : $(date +%c) =====" >> $DEPLOY_LOG_PATH
 DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포" >> $DEPLOY_LOG_PATH
-nohup java -jar $DEPLOY_JAR >> $APPLICATION_LOG_PATH 2> $DEPLOY_ERR_LOG_PATH &
-
+export $DEPLOY_JAR;
+export $APPLICATION_LOG_PATH;
+export $EPLOY_ERR_LOG_PATH
+sh /home/ubuntu/security-sh/githubAtion.sh
 sleep 3
 
 echo "> 배포 종료 : $(date +%c)" >> $DEPLOY_LOG_PATH
