@@ -16,6 +16,7 @@ public class DemoController {
     @Autowired MemberRepository memberRepository;
     @GetMapping("/demo")
     public String demo() {
+        System.out.println("??");
         return "demo " + value;
     }
     @GetMapping("/member")
